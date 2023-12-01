@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>7 Subject Marksheet</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.cir{
+    position: absolute;
+    right: -30%;
+    top: -40%;
+    border-radius: 100%;
+    width: 450px;
+    height: 450px;
+    background-color: lightcoral;
+    z-index: -1;
+}
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    background-color: darkslateblue;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkslateblue;
+}
+
+#resultContainer {
+    margin-top: 20px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cir"></div>
+        <h1>Marksheet for Information technology</h1>
+        <form id="markForm">
+            <!-- Input fields for 7 subjects -->
+            <label for="subject1">C language</label>
+            <input type="number" id="subject1" required>
+
+            <label for="subject2">C++ language</label>
+            <input type="number" id="subject2" required>
+
+            <label for="subject3">Database</label>
+            <input type="number" id="subject3" required>
+
+            <label for="subject4">Html</label>
+            <input type="number" id="subject4" required>
+
+            <label for="subject5">Css</label>
+            <input type="number" id="subject5" required>
+
+            <label for="subject6">Php</label>
+            <input type="number" id="subject6" required>
+
+            <label for="subject7">Core java</label>
+            <input type="number" id="subject7" required>
+
+            <!-- Button to calculate result -->
+            <button type="button" onclick="calculateResult()">Calculate Result</button>
+        </form>
+
+        <!-- Display overall percentage and total -->
+        <div id="resultContainer" style="display: none;">
+            <h2>Result:</h2>
+            <p id="overallPercentage"></p>
+            <p id="totalMarks"></p>
+        </div>
+    </div>
+
+    <script>
+        function calculateResult() {
+    const marks = [];
+    for (let i = 1; i <= 7; i++) {
+        const subjectMark = parseFloat(document.getElementById(`subject${i}`).value);
+        if (isNaN(subjectMark)) {
+            alert('Please enter valid marks for all subjects.');
+            return;
+        }
+        marks.push(subjectMark);
+    }
+
+    const totalSubjects = marks.length;
+    const totalMarks = marks.reduce((total, mark) => total + mark, 0);
+    const overallPercentage = (totalMarks / (totalSubjects * 100)) * 100;
+
+    document.getElementById('overallPercentage').innerText = `Overall Percentage: ${overallPercentage.toFixed(2)}%`;
+    document.getElementById('totalMarks').innerText = `Total Marks: ${totalMarks}/700`;
+    document.getElementById('resultContainer').style.display = 'block';
+}
+
+    </script>
+</body>
+</html>

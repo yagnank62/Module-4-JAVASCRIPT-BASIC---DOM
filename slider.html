@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Use external js library to show slider
+    </title>
+    <style>
+        .slider {
+    width: 100%;
+    position: relative;
+}
+  
+.slider ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+  
+.slider li {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+  
+img {
+    height: 400px;
+    width: 400px;
+}
+  
+.slider li.active {
+    opacity: 1;
+}
+  
+.slider .caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 18px;
+    padding: 10px;
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <ul>
+            <li>
+                <img src=
+"https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https://cdni.autocarindia.com/ExtraImages/20230906033403__Nexon%20Facelift%20Watermarked%20_%20Resized%20Web._001.jpeg&w=726&h=482&q=75&c=1" 
+                    alt=" Image 1">
+                
+            </li>
+            <li>
+                <img src=
+"https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https://cdni.autocarindia.com/ExtraImages/20230906033403__Nexon%20Facelift%20Watermarked%20_%20Resized%20Web._015.jpeg&w=726&h=482&q=75&c=1" 
+                    alt=" Image 2">
+                
+            </li>
+            <li>
+                <img src=
+"https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https://cdni.autocarindia.com/ExtraImages/20230906033403__Nexon%20Facelift%20Watermarked%20_%20Resized%20Web._003.jpeg&w=726&h=482&q=75&c=1" 
+                    alt=" Image 3">
+                
+            </li>
+            <li>
+                <img src=
+"https://cdni.autocarindia.com/Utils/ImageResizer.ashx?n=https://cdni.autocarindia.com/ExtraImages/20230906033403__Nexon%20Facelift%20Watermarked%20_%20Resized%20Web._010.jpeg&w=726&h=482&q=75&c=1" 
+                    alt=" Image 4">
+            </li>
+        </ul>
+    </div>
+    <script>
+const slider = document.querySelector('.slider');
+const slides = slider.querySelectorAll('li');
+  
+// Store the total number of images
+const slideCount = slides.length;
+let activeSlide = 0;
+  
+// To change the images dynamically every 
+// 5 Secs, use SetInterval() method
+setInterval(() => {
+    slides[activeSlide].classList.remove('active');
+    activeSlide++;
+    if (activeSlide === slideCount) {
+        activeSlide = 0;
+    }
+    slides[activeSlide].classList.add('active');
+}, 2500);
+    </script>
+</body>
+</html>

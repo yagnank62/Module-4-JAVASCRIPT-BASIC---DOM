@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hide & show | javascript </title>
+    <style>
+        .pass{
+            width: fit-content;
+            margin: 20% auto;
+        }
+        .pass div{
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+        }
+        .pass div img{
+            position: absolute;
+            right: 3%;
+            height: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="pass">
+        <div>
+            <input type="password" id="password">
+            <img src="https://cdn-icons-png.flaticon.com/512/2767/2767146.png" alt="" id="pass-icon" onclick="myFunction()">
+        </div>
+    </div>
+    <script>
+      var icon = 1; 
+      function myFunction(){
+          if(icon == 1){
+              document.getElementById("password").type = 'password';
+              document.getElementById("pass-icon").src = 'https://cdn-icons-png.flaticon.com/512/2767/2767146.png';
+              icon = 0;
+            }else{
+                document.getElementById("password").type = 'text';
+                document.getElementById("pass-icon").src = 'https://cdn-icons-png.flaticon.com/512/6803/6803345.png';
+                icon = 1;
+            }
+        }
+    </script>
+
+</body>
+</html>

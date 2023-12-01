@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module-4(JAVASCRIPT BASIC & DOM)</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            width: 95%;
+            margin: 0 auto;
+            background: url(https://img.freepik.com/free-vector/white-elegant-texture-background-style_23-2148432200.jpg?w=996&t=st=1700158847~exp=1700159447~hmac=7ed185d964da6916ade910217da41f4a6c1b0f27b184a33050f2a798b29c91e6);
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+        }
+
+        details {
+            margin: 25px 0px;
+            padding: 10px 25px;
+            background-color: aliceblue;
+            border: 1px solid skyblue;
+            border-radius: 5px;
+            font-size: 18px;
+            line-height: 25px;
+        }
+
+        details p {
+            margin-top: 10px;
+        }
+
+        details summary {
+            font-size: 22px;
+            word-spacing: 3px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <center>
+        <h1>Module - 4(JAVASCRIPT BASIC & DOM)</h1>
+    </center>
+
+    <!-- Question 1 -->
+
+    <details>
+        <summary>What is JavaScript?</summary>
+        <p>
+            A dynamic computer programming language is called JavaScript. Its
+            implementations enable client-side script to interact with users and create dynamic
+            pages, and it is most frequently used as a component of web pages. It is an objectoriented programming
+            language that may be interpreted. LiveScript was the
+            original name of JavaScript, but Netscape changed it to JavaScript, maybe in
+            response to the buzz that Java was causing. LiveScript, the predecessor to
+            JavaScript, had its debut in Netscape 2.0 in 1995. Netscape, Internet Explorer, and
+            other web browsers all contain the general-purpose language's core.
+        </p>
+        <br>
+        <ul>
+            <li>A simple, interpreted programming language is JavaScript.</li>
+            <li>designed for the development of network-centric applications.</li>
+            <li>linked with and complementary to Java.</li>
+            <li>connected with and complementary to HTML.</li>
+            <li>Open and platform-neutral
+            </li>
+        </ul>
+        <br>
+        <h2>Client-Side JavaScript</h2>
+        <br>
+        <p>Client-side The most popular variation of the language is JavaScript. For the
+            script's code to be recognized by a browser, it must be incorporated into or
+            referenced from an HTML document.</p>
+        <p>It implies that a web page need not be static HTML, but rather may contain
+            programs that communicate with users, manage browsers, and generate HTML
+            content on the go.</p>
+        <p>Over typical CGI server-side scripts, the JavaScript client-side method offers a
+            number of benefits. JavaScript, for instance, can be used to determine whether a
+            user has supplied a valid email address in a form field.
+        </p>
+        <p>When a user submits a form, JavaScript is run, and only if all of the entries are
+            correct are they sent to the web server.
+        </p>
+        <p>User-initiated events, including as button clicks, link navigation, and other explicit
+            or implicit user activities, can be caught using JavaScript.
+        </p>
+        <br>
+        <h2>Advantages of JavaScript</h2>
+        <br>
+        <p>The merits of using JavaScript are −</p>
+        <br>
+        <ul>
+            <li><strong>Less server interaction</strong> and the ability to validate user input before to
+                transmitting the page to the server are two benefits of using JavaScript.
+                Because of the reduced server traffic, your server will be under less stress.</li>
+            <li><strong>The visitors receive immediate</strong>feedback and don't have to wait for the
+                page to reload to find out whether they forgot to type something.</li>
+            <li><strong>Enhanced interactivity</strong>You may design interfaces that respond when the
+                user moves their mouse cursor over them or presses a keyboard shortcut to
+                activate them.</li>
+            <li><strong>Richer interfaces</strong>You can use JavaScript to integrate sliders and drag-anddrop elements
+                to provide your site visitors with a Rich Interface.</li>
+        </ul>
+        <br>
+        <h2>Limitations of JavaScript</h2>
+        <br>
+        <p>JavaScript can't be used as a legitimate programming language. It lacks the
+            following crucial components:
+        </p>
+        <ul>
+            <li>Client-side It is not possible to read or write files using JavaScript. This is
+                still here for security purposes.
+            </li>
+            <li>Because there is no such support, JavaScript cannot be utilized for
+                networking applications.</li>
+            <li>JavaScript lacks the ability to use multiple processors or threads.
+            </li>
+        </ul>
+    </details>
+
+    <!-- Question 2 -->
+    <details>
+        <summary> What is the use of isNaN function?</summary>
+        <p>
+            The isNaN() function in JavaScript can be used to determine whether a given value
+            is or is not an unlawful number. If the value is a NaN, it returns true; otherwise, it
+            returns false. The Number is not the same as it.isNaN() Function.
+        </p>
+        <p><strong>Syntax:</strong> <br> isNaN( value ) </p>
+        <p><strong>Values for the single parameter</strong> that this method accepts are as follows and are mentioned
+            above:</p>
+        <ul>
+            <li><strong>value:</strong> It is a mandatory argument for the isNaN() method.</li>
+        </ul>
+        <p><strong>The result of this example</strong> isNan() function will be in boolean format and will check various
+            values.</p>
+        <p>
+            console.log(isNaN(0 / 0)); <br>
+            console.log(isNaN(12.3)); <br>
+            console.log(isNaN("panchal")); <br>
+            console.log(isNaN("13/12/2020")); <br>
+            console.log(isNaN(-46)); <br>
+            console.log(isNaN(NaN)); <br>
+            console.log(isNaN(12)); <br>
+        </p>
+        <h2>output:</h2>
+        <div style="background-color: lightgray;padding: 10px;">
+            <p>true</p>
+            <p>false</p>
+            <p>true</p>
+            <p>true</p>
+            <p>false</p>
+            <p>true</p>
+            <p>false</p>
+        </div>
+    </details>
+    <!-- Question 3 -->
+    <details>
+        <summary>What is negative Infinity?</summary>
+        <p>In Java script, a negative infinity is a number that is created by "dividing a negative number by zero."</p>
+        <p>It is not necessary to create a number object in order to access this static attribute.</p>
+        <p>The negative value of the infinity property of the global object is the same as the value of negative
+            infinity.</p>
+        <p><strong>In contrast to the mathematical infinity, the values react differently:</strong></p>
+        <br>
+        <ol style="padding-left: 2%;">
+            <li>Any positive value multiplied by NEGATIVE_INFINITY is
+                NEGATIVE_INFINITY, including POSITIVE_INFINITY.
+            </li>
+            <li>When a negative value is multiplied by another negative value, the result is POSITIVE_INFINITY. This
+                includes NEGATIVE_INFINITY.</li>
+            <li>Zero is NaN when multiplied by NEGATIVE_INFINITY.</li>
+            <li>NaN is NaN when multiplied by NEGATIVE_INFINITY.</li>
+            <li>NEGATIVE_INFINITY is POSITIVE_INFINITY when divided by any
+                other negative number besides NEGATIVE_INFINITY.</li>
+            <li>NEGATIVE_INFINITY is NEGATIVE_INFINITY when divided by any
+                positive value other than POSITIVE_INFINITY.
+            </li>
+            <li>Negative_infinity is NaN when divided by either negative or positive
+                infinite.</li>
+            <li>Zero is the result of any division by NEGATIVE_INFINITY.</li>
+        </ol>
+    </details>
+
+    <!-- Question 4 -->
+    <details>
+        <summary>Which company developed JavaScript?</summary>
+        <p><strong>Brendan Eich</strong> developed JavaScript while working at <strong> Netscape Communications</strong>
+            in 1995. JavaScript was created by Netscape and Eich as a scripting language for use with Netscape
+            Navigator, the company's primary web browser. In order to portray JavaScript as a companion for the Java
+            language, a product of their partner Sun Microsystems, Netscape changed the language's name from LiveScript
+            to JavaScript. Despite some superficial grammatical similarities,JavaScript and the Java programming
+            language are unrelated.Following its release, more and more browsers began to support JavaScript. JavaScript
+            was nevertheless not regarded as a serious programming language for a significant portion of its history.
+            Early versions had significant speed and security problems, but there were no other options available to
+            developers. They had to utilize JavaScript if they wanted to run programs in the browser.</p>
+    </details>
+
+    <!-- Question 5 -->
+    <details>
+        <summary>What are undeclared and undefined variables?</summary>
+        <p>When a variable is declared but not given a value, it is said to be undefined. A keyword is not undefined.
+        </p>
+        <p>When we attempt to access a variable that has not yet been initialized or declared using the var or const
+            keyword, we get the undeclared error. We will get a runtime error with the return value of "undefined" if we
+            attempt to retrieve the value of an undeclared variable using the 'typeof' operator. The undeclared
+            variables always have a global scope.</p>
+        <br>
+        <h2>For example: Undefined:</h2>
+        <br>
+        <div style="background-color: lightgray;padding: 10px;">
+            <p>
+                undefined <br>
+                console.log(panchal) <br>
+                let panchal; <br>
+            </p>
+        </div>
+        <br>
+        <h2>Undeclared:</h2>
+        <br>
+        <div style="background-color: lightgray;padding: 10px;">
+            <p>
+                // ReferenceError: myVariable is not define <br>
+                console.log(myVariable) <br>
+            </p>
+        </div>
+        <br>
+        <p>
+            <strong>Example 1:</strong> This example illustrates a situation where an undeclared variable is used.
+            <br>
+            function panchal() { <br>
+            // 'use strict' verifies that no undeclared <br>
+            // variable is present in our code <br>
+            'use strict'; <br>
+            x = "panchal"; <br>
+            } <br>
+            GFG(); // Accessing the above function <br>
+        </p>
+        <br>
+        <h2>Output</h2>
+        <br>
+        <div style="background-color: lightgray;padding: 10px;">
+            ReferenceError: x is not defined
+        </div>
+
+        <br>
+
+        <p>
+            <strong> Example 2:</strong> This example checks whether a given variable is undefined or not. <br>
+            function checkVar() { <br>
+            let string; <br>
+            if (typeof variable === "undefined") { <br>
+            string = "Variable is undefined"; <br>
+            } else { <br>
+            string = "Variable is defined"; <br>
+            } <br>
+            console.log(string); <br>
+            } <br>
+            checkVar(); <br>
+            <br>
+        <h2>Output</h2>
+        <br>
+        <div style="background-color: lightgray;padding: 10px;">
+            Variable is undefined
+        </div>
+        </p>
+    </details>
+    <!-- Question 6 -->
+    <details>
+        <summary>Write the code for adding new elements dynamically?</summary>
+        <p> <strong>HTML DOM</strong> which displays an HTML document as a tree-structure, makes
+            HTML documents simple to read and alter. A Document object is created when an
+            HTML file is loaded in a browser window. You can use
+            the <strong> document.createElement() </strong> method to dynamically create a specific HTML
+            element in JavaScript. After creation, attributes can be added. You must put the
+            element into the document's DOM-tree if you want it to appear in the document.
+        </p>
+        <br>
+        <h2>example</h2>
+        <br>
+        <div style="background-color: lightgray;padding: 10px;">
+            &lt;html&gt; <br>
+            &lt;body&gt; <br>
+            &lt;button onclick="create()"&gt;Create Heading&lt;/button&gt; <br>
+            &lt;script&gt; <br>
+            function create() { <br>
+            var h1 = document.createElement('h1'); <br>
+            h1.textContent = "New Heading!!!"; <br>
+            h1.setAttribute('class', 'note'); <br>
+            document.body.appendChild(h1); <br>
+            } <br>
+            &lt;/script&gt; <br>
+            &lt;/body&gt; <br>
+            &lt;/html&gt; <br>
+        </div>
+
+        <p>
+            Please record.The element is made when <strong> document.createElement </strong> is used in
+            conjunction with an HTML tag. Using <strong>setAttribute,</strong> the class attribute is changed
+            after the textContent has been adjusted. A data attribute or any other kind of
+            attribute, similar to how you can do so in HTML, might also be added using this.
+        </p>
+        <p>
+            Using the appendChild method of the body element, the element is then finally
+            attached to the body.
+        </p>
+        <p>
+            It's actually essentially the same as &lt;h1 class="note"&gt; New Heading!!! &lt;/h1&gt;.
+        </p>
+        <p>
+            The ability to create and style pieces "on the fly" is the strength of what we see
+            today. You may either add every element to the page as you develop it or you can
+            use the <strong> createElement() </strong> method to create and insert HTML elements dynamically
+            at runtime.
+
+        </p>
+    </details>
+    <!-- Question 7 -->
+    <details>
+        <summary>What is the difference between ViewState and SessionState?</summary>
+        <br>
+        <table border="1" cellspacing="0">
+            <tr bgcolor="lightgray">
+                <th>ViewState</th>
+                <th>SessionState</th>
+            </tr>
+            <tr>
+                <td>solely at the page level
+                    maintained. </td>
+                <td>held at the session level.</td>
+            </tr>
+            <tr>
+                <td>Only one page, not numerous
+                    pages, can display the view
+                    status.
+                </td>
+                <td>The availability of session state
+                    values spans all pages accessible
+                    during a user session.
+                </td>
+            </tr>
+            <tr>
+                <td>In the case that a postback
+                    operation does place, values will
+                    be retained.
+                </td>
+                <td>In session state, user data
+                    remains in the server. Data is
+                    available to user until the
+                    browser is closed or there is
+                    session expiration.
+                </td>
+            </tr>
+            <tr>
+                <td>Only the client's end of the
+                    information is kept on file.</td>
+                <td>On the server, information is
+                    saved.
+                </td>
+            </tr>
+            <tr>
+                <td>used to provide the storage of
+                    information unique to a given
+                    page instance.
+                </td>
+                <td>used to store user-specific data
+                    permanently on the server.
+                </td>
+            </tr>
+            <tr>
+                <td>When a new page is loaded,
+                    ViewState values are lost or
+                    cleared</td>
+                <td>It is possible for a programmer,
+                    user, or timeout to clear the
+                    session state.
+                </td>
+            </tr>
+        </table>
+    </details>
+    <!-- Question 8 -->
+    <details>
+        <summary>What is === operator?</summary>
+        <p>
+            The JavaScript Strict Equality Operator compares two operands and returns true if
+            the operands' values and types match. Since there is no type conversion, the
+            operation will return false even if the value stored in the operands is the same but
+            their types are different.
+        </p>
+        <br>
+        <h2>Syntax:</h2>
+        <br>
+        <div style="background-color: lightgray;padding: 10px;">
+            a===b
+        </div>
+        <br>
+        <p>
+            <strong>Example 1:</strong> In this example, we will compare the value of the same data types. <br>
+            let a = 2, b=2, c=3; <br>
+            let d = {name:"Ram"}; <br>
+            let e = {name:"Ram"}; <br>
+            let f = e; <br>
+            console.log(a===b); <br>
+            console.log(a===c); <br>
+            console.log(d===e); <br>
+            console.log(f===e); <br>
+        </p>
+        <br>
+        <p><strong>Output:</strong> When two objects are compared, their references are examined, just like
+            with other comparisons, and true is only returned if the references are identical.
+        </p>
+        <br>
+        <div style="background-color: lightgray;padding: 10px;">
+            <p>true</p>
+            <p>false</p>
+            <p>fasle</p>
+            <p>true</p>
+        </div>
+    </details>
+    <!-- Question 9 -->
+    <details>
+        <summary> How can the style/class of an element be changed?</summary>
+        <p>
+            This article will teach us how to modify an element's style or class. The UI is
+            crucial if you want to create a cool website or app. With the use of JavaScript, any
+            CSS property from an HTML element can be modified, added, or removed in
+            response to any event. We are able to complete this work using one of two popular
+            methods.
+        </p>
+        <ul style="padding-left: 2%;">
+            <li> style.property </li>
+            <li> Changing the class itself </li>
+        </ul>
+        <p><strong>Approach :</strong>CSS can be modified using the style property to:</p>
+        <br>
+        <h2>Syntax:</h2>
+        <br>
+        <div style="background-color: lightgray;padding: 10px;">
+            document.getElementById("id").style.property = new_style
+        </div>
+        <p>
+            <strong>Example:</strong> In this instance, a PAN number validator has been constructed. We will
+            first use a regex pattern to match the input value. If it does, add an inline style to
+            the p tag using JavaScript. If not, change the style of the p tag.
+        </p>
+        <br>
+        <div style="background-color: lightgray;padding: 10px;">
+            &lt;!DOCTYPE html&gt; <br>
+            &lt;html lang="en"&gt; <br>
+            &lt;body&gt; <br>
+            &lt;h2&gt; How can the style/class of an element be changed? &lt;/h2&gt; <br>
+            &lt;b&gt; Validate Pan Number&lt;/b&gt; <br>
+            &lt;input type="text" id="pan" /&gt; <br>
+            &lt;p>&lt;/p&gt; <br>
+            &lt;button id="submit">Validate&lt;/button&gt; <br>
+            &lt;script&gt; <br>
+            const btn = document.getElementById("submit"); <br>
+            btn.addEventListener("click", function () { <br>
+            const pan = document.getElementById("pan").value; <br>
+            const para = document.querySelector("p"); <br>
+            let regex = /([A-Z]){5}([0-9]){4}([A-Z]){1}$/; <br>
+            if (regex.test(pan.toUpperCase())) { <br>
+            para.innerHTML = "Hurrey It's correct"; <br>
+            // Inline style <br>
+            para.style.color = "green"; <br>
+            } else { <br>
+            para.innerHTML = "OOps It's wrong!"; <br>
+            // Inline style <br>
+            para.style.color = "red"; <br>
+            } <br>
+            }); <br>
+            &lt;/script&gt; <br>
+            &lt;/html&gt; <br>
+        </div>
+        <p><label for=""><strong>Validate Pan Number </strong></label><input type="text"><br> validate </p>
+    </details>
+    <!-- Question 10 -->
+    <details>
+        <summary>How to read and write a file using JavaScript?</summary>
+        <p>
+            File reading and writing are not supported on the client side by JavaScript
+            browsers. The Node.js fs module can be used for this on the server-side. It has
+            techniques for reading and writing files on the file system that are both synchronous and asynchronous.
+            Several examples of the node.js fs module reading
+            and writing files will be displayed.
+        </p>
+        <p>
+            To read and write files, utilize Javascript's fs.readFile() and rs.writeFile() APIs.
+            The file is read via an internal technique called fs.readFile(). This approach reads
+            the entire file into memory and stores it in a buffer.
+        </p>
+        <br>
+        <h2>Syntax:</h2>
+        <br>
+        <div style="background-color: lightgray;padding: 10px;">
+            fs.readFile( file_name, encoding, callback_function )
+        </div>
+        <br>
+        <h2>Parameters:</h2>
+        <br>
+        <ul style="padding-left: 2%;">
+            <li> <strong>filename:</strong> It includes the filename to read or, if the file was saved
+                somewhere else, the entire path.</li>
+            <li>The encoding of the file is kept there. The default value is 'utf8'.</li>
+            <li>This is a <strong> callback function </strong> that is used after the file has been read. There are two
+                inputs needed.</li>
+            <li><strong>err:</strong> if there was a mistake</li>
+            <li><strong>data:</strong> The contents of the file</li>
+            <li><strong>Return Value:</strong> It provides both the file's contents and any faults that might
+                have happened.</li>
+        </ul>
+        <p>
+            Data is written asynchronously to files using the fs.writeFile() function. The file
+            will be replaced if it already exists.
+        </p>
+        <br>
+        <h2>Syntax:</h2>
+        <br>
+        <div style="background-color: lightgray;padding: 10px;">
+            fs.writeFile( file_name, data, options, callback )
+        </div>
+        <br>
+        <h2>Parameters:</h2>
+        <br>
+        <ul style="padding-left: 2%;">
+            <li>&lt;file_name: &lt;strong=""&gt;The location of the file to be written is
+                specified by a string, buffer, URL, or integer file description. A file
+                descriptor will perform similarly to the fs. write() method when
+                used.&lt;/file_name&gt;</li>
+            <li>data: A string, buffer, typed array, or data view are the possible types
+                of data that will be transmitted to the file.
+            </li>
+            <li>options: This string or object can be used to denote output options that
+                are optional. There are three other criteria available for selection.</li>
+            <li>The string value encoding describes the file's encoding. The default
+                value is 'utf8'.</li>
+            <li>mode is an integer number that indicates the file mode. The default
+                value is 0o666.</li>
+            <li>flag: This string represents the flag for writing files. The default value is
+                "w."
+            </li>
+            <li>callback: When the method is executed, this function is called.</li>
+            <li>Err: This is the error that will be thrown if the process fails.</li>
+        </ul>
+        <p>
+            Let's use the following example to explain how to write and read files: <br>
+            The writeFile() method is used to create the file in the example below, and the
+            readFile() method is used to read its contents.
+        </p>
+        <br>
+        <div style="background-color: lightgray;padding: 10px;">
+            var fs = require("fs"); <br>
+            console.log(" Writing into an file "); <br>
+            // Sample.txt is an empty file <br>
+            fs.writeFile( <br>
+            "sample.txt", <br>
+            "Let's write a few sentences in the file", <br>
+            function (err) { <br>
+            if (err) { <br>
+            return console.error(err); <br>
+            } <br>
+            // If no error the remaining code executes <br>
+            console.log(" Finished writing "); <br>
+            console.log("Reading the data that's written"); <br>
+            // Reading the file <br>
+            fs.readFile("sample.txt", function (err, data) { <br>
+            if (err) { <br>
+            return console.error(err); <br>
+            } <br>
+            console.log("Data read : " + data.toString()); <br>
+            }); <br>
+            } <br>
+            ); <br>
+        </div>
+    </details>
+    <!-- Question 11 -->
+    <details>
+        <summary>What are all the looping structures in JavaScript?</summary>
+        <p>In the last chapter, we discovered how to use conditional statements in
+            JavaScript by using practical programs.</p>
+        <p>
+            We learn about looping and jump control statements in this chapter. Code
+            blocks can be run in loops as many times as necessary.
+        </p>
+        <br>
+        <strong>In JavaScript, the following looping statements are supported:</strong>
+        <br>
+        <br>
+        <h2>For Loop Statement</h2>
+        <p>
+            When a loop is used, it performs the three specified tasks (Statement 1,
+            Statement 2, Statement 3) a fixed number of times. The general syntax of the
+            "for" statement is demonstrated in the following code.
+        </p>
+        <br>
+        <h2> Syntax </h2>
+        <br>
+        <div style="background-color: lightgray;padding: 10px;">
+            for (initialization; condition; increment/ decrement) <br>
+            { <br>
+            Executed these statements; <br>
+            } <br>
+        </div>
+        <br>
+        <h2> While Loop Statement </h2>
+        <br>
+        <p>
+            Of all looping statements, the while one is the most straightforward. While a
+            particular condition is true, a block of code is repeated in a while loop. The
+            three distinct jobs have been carried out in the for loop. The same three
+            specific activities are carried out in the while loop as well as where it is
+            mentioned in the statement, but the initialization and conditions of the while
+            loop take place in various locations. The code below demonstrates the while
+            statement's basic syntax:
+        </p>
+        <br>
+        <h2>Syntax</h2>
+        <br>
+        <div style="background-color: lightgray;padding: 10px;">
+            while (condition) <br>
+            { <br>
+            Execute these statements; //true <br>
+            Increment/decrement; <br>
+            } <br>
+        </div>
+        <br>
+        <h2>do-while Statement</h2>
+        <br>
+        <p>
+            The while statement and the do-while statement are related. The condition is
+            present outside the statement in the do-while construct. If the condition is not
+            met, it will still run at least once. If the condition is true, the code will continue
+            to run; if the condition is false, the code will cease running. The general syntax
+            of the while statement is shown in the following code:
+        </p>
+        <br>
+        <h2>Syntax</h2>
+        <br>
+        <div style="background-color: lightgray;padding: 10px;">
+            do <br>
+            { <br>
+            Execute the statements; <br>
+            Increment/decrements; <br>
+            } <br>
+            while (condition) //true <br>
+        </div>
+
+    </details>
+    <!-- Question 12 -->
+    <details>
+        <summary>How can you convert the string of any base to an integer in JavaScript?</summary>
+        <p>
+            JavaScript uses the parseInt(), Number(), and Unary operator (+) functions to
+            convert a string to an integer. When the string doesn't contain a number, the
+            parseInt() function returns NaN (not a number). Only the specified number
+            will be returned if a string containing a number is given. Spaces are not
+            permitted in this function. If a specific number is supplied with spaces, the
+            portion of the number that appears before the space is returned as the output.
+        </p>
+        <p>
+            We can use the parseInt(), Number(), and Unary operator (+) to turn a string
+            into an integer. An illustration is used to discuss each of them.
+        </p>
+        <p>
+            <strong> Using the parseInt() method </strong> <br>
+            <strong>The parseInt() method's syntax is</strong> <br> <br>
+        </p>
+        <div style="background-color: lightgray;padding: 10px;">
+            parseInt(string); parseInt(string,radix);
+        </div>
+        <p>
+            Where, <br>
+            The string to be parsed is called string. <br>
+            In the Number System, the radix is used to refer to the basis. 8 is octal, 10 is <br>
+            decimal, 16 is hexadecimal, and 2 is binary. <br>
+            The integer value that was extracted from the string is returned by this <br>
+            procedure. <br>
+            Using the Number() method <br>
+            The Number() method's syntax is <br>
+        </p>
+        <div style="background-color: lightgray;padding: 10px;">
+            Number(value)
+        </div>
+        <p>
+            If value is not of a primitive data type that can be converted to a number, NaN
+            is returned. A number is returned by this procedure. <br>
+            <strong> Using the unary operator </strong> <br>
+            <strong> The unary plus operator's syntax is. </strong>
+        </p>
+        <p>
+            If value is not of a primitive data type that can be converted to a number, NaN
+            is returned. A number is returned by this procedure. <br>
+            Using the unary operator <br>
+            The unary plus operator's syntax is. <br>
+        </p>
+        <div style="background-color: lightgray;padding: 10px;">
+            +op;
+        </div>
+        <p>
+            where an operand is op. The unary operator + tries to turn the operand into a
+            number when it is put before it. The response is a number.
+        </p>
+    </details>
+    <!-- Question 13 -->
+    <details>
+        <summary>What is the function of the delete operator?</summary>
+        <p>
+            An object, an object's property, or an element from an array can all be
+            deleted using the delete operator. Variables that are not declared using the
+            var statement can likewise be deleted by the operator.
+        </p>
+        <br>
+        <h2>Syntax</h2>
+        <br>
+        <div style="background-color: lightgray;padding: 10px;">
+            delete objectName delete objectName.property delete objectName[index] <br>
+            delete property // The command acts only within a with statement. <br>
+        </div>
+        <p><strong>
+                Parameters <br>
+                objectName: An object's name. <br>
+                property: The property already exists. <br>
+                index: An integer that represents the index of the array. <br>
+            </strong></p>
+    </details>
+    <!-- Question 14 -->
+    <details>
+        <summary>What are all the types of Pop up boxes available in JavaScript?</summary>
+        <p><strong>In general, javascript supports three different forms of pop-up boxes:
+            </strong></p>
+        <br>
+        <h2>Alert: A message with an OK button is all that is shown.</h2>
+        <br>
+        <div style="background-color: lightgray;padding: 10px;">
+
+            &lt; !DOCTYPE html &gt; <br>
+            &lt; html &gt; <br>
+            &lt; body &gt; <br>
+            &lt; p &gt;Click the button to display an alert box. &lt; /p &gt; <br>
+            &lt;button onclick="myFunction()"&gt; Click me &lt;/button&gt; <br>
+            &lt;script&gt; <br>
+            function myFunction() { <br>
+            alert("Hello! Welcome to home!"); <br>
+            } <br>
+            &lt;/script&gt; <br>
+            &lt;/body&gt; <br>
+            &lt;/html&gt; <br>
+        </div>
+        <br>
+        <h2>Confirm -- A confirmation message window with an OK and Cancel button appears. </h2>
+        <br>
+        <div style="background-color: lightgray;padding: 10px;">
+            &lt; !DOCTYPE html &gt; <br>
+            &lt; html &gt; <br>
+            &lt; body &gt; <br>
+            &lt; p &gt;Click the button to display an confirm box. &lt; /p &gt; <br>
+            &lt;button onclick="myFunction()"&gt; Click me &lt;/button&gt; <br>
+            &lt;script&gt; <br>
+            function myFunction() { <br>
+            confirm("Press a button!"); <br>
+            } <br>
+            &lt;/script&gt; <br>
+            &lt;/body&gt; <br>
+            &lt;/html&gt; <br>
+        </div>
+        <br>
+        <h2>Prompt: A dialog window asking for the user's input then displays
+            confirmation buttons.</h2>
+        <br>
+        <div style="background-color: lightgray;padding: 10px;">
+            &lt; !DOCTYPE html &gt; <br>
+            &lt; html &gt; <br>
+            &lt; body &gt; <br>
+            &lt; p &gt;Click the button to display an prompt box. &lt; /p &gt; <br>
+            &lt;button onclick="myFunction()"&gt; Click me &lt;/button&gt; <br>
+            &lt;p id ="demo"&gt;&lt;/p&gt; <br>
+            &lt;script&gt; <br>
+            function myFunction() { <br>
+            var person = prompt("Please enter your name", "panchal"); <br>
+            if (person != null) { <br>
+            document.getElementById("demo").innerHTML = <br>
+            "Hello " + person + "! How are you today?"; <br>
+            } <br>
+            } <br>
+
+            &lt;/script&gt; <br>
+            &lt;/body&gt; <br>
+            &lt;/html&gt; <br>
+        </div>
+    </details>
+    <!-- Question 15 -->
+    <details>
+        <summary>What is the use of Void (0)?</summary>
+        <p>
+            "javascript:void(0)" may have occasionally appeared in an HTML document.
+            It is frequently used when adding an expression to a web page can have
+            unintended consequences. The command "javascript:void(0)" is used to
+            reverse this effect. This expression yields a primitive value that is undefinable.
+            This is frequently applied to hyperlinks. You may occasionally choose to
+            execute some JavaScript from a link. Depending on the URL provided, the
+            browser typically loads a fresh copy of the current page when you click a link.
+            But if you've connected some JavaScript thereto link, you probably don't
+            want this to happen. Using void(0) would stop the page from refreshing
+        </p>
+        <br>
+        <h2>Example:</h2>
+        <br>
+        <div style="background-color: lightgray;padding: 10px;">
+            &lt;h1 style="color:green"&gt; panchal &lt;/h1&gt; <br>
+            &lt;h3>without JavaScript:void(0)&lt;/h3&gt; <br>
+            &lt;a href="#" ondblclick="alert('Welcome to Geeks for Geeks')"&gt; <br>
+            Double click on me &lt;/a&gt; <br>
+            &lt;a href="#" ondblclick="geeks()"&gt; Double click on me &lt;/a&gt; <br>
+            &lt;script&gt; <br>
+            function geeks(){ <br>
+            document.getElementById("gfg") <br>
+            .innerHTML='Welcome to GeeksforGeeks'; <br>
+            } <br>
+            &lt;/script&gt; <br>
+            &lt;p id="gfg"&gt; &lt;/p&gt; <br>
+        </div>
+    </details>
+    <!-- Question 16 -->
+    <details>
+        <summary> How can a page be forced to load another page in JavaScript?</summary>
+        <p>
+            In this post, we'll look at how JavaScript can be used to compel one page to load another.
+        </p>
+        <p>
+            <strong>Approach:</strong> To forcefully load another page in Javascript, we can use the
+            window.location attribute inside the script element. It is a pointer to a Location object,
+            which stands in for the document's current location. By visiting a window, we can
+            modify its URL.
+        </p>
+        <br>
+        <h2>Syntax:</h2>
+        <br>
+        <div style="background-color: lightgray;padding: 10px;">
+            &lt;script&gt; <br>
+            window.location = &lt; Path / URL &gt; <br>
+            &lt;/script&gt; <br>
+        </div>
+        <br>
+        <p>
+            In the example above, we can see that modifying the window.location object inside of
+            Javascript allows us to forcefully load any page from Javascript without using a href
+            tag. We'll create a simple working example so we can learn it on the job.
+        </p>
+        <br>
+        <ul style="padding-left: 2%;">
+            <li>
+                Step 1. Make a file called index.html as the first step. Add two buttons and a heading
+                to it. One button forces the loading of a live URL while the other forces the loading
+                of a local HTML page. Two functions are contained in the script> tag; one loads the
+                gfg homepage, and the other uses the window.location property to load a local
+                HTML page.
+            </li>
+            <li>
+                Step 2: Make a newPage.html file. This is the local HTML page that Javascript would
+                load.
+            </li>
+        </ul>
+    </details>
+    <!-- Question 17 -->
+    <details>
+        <summary>What are the disadvantages of using innerHTML
+            in JavaScript?</summary>
+        <p>
+            Step The Document Object Model (DOM)'s innerHTML attribute is used to set or
+            return an element's HTML content. where the textual content of the HTML element is
+            represented by the return value. It enables JavaScript code to alter a website that is
+            currently being shown. More specifically, it alters or restores an element's internal
+            HTML information. Since it is the simplest approach to manipulate DOM, the
+            innerHTML property is frequently used to alter the contents of webpages. But utilizing
+            innerHTML in JavaScript has several drawbacks.
+
+        </p>
+        <br>
+        <h2>Using JavaScript's innerHTML property has the following drawbacks:</h2>
+        <br>
+        <p>
+            The process of employing innerHTML is more slower since its contents are constructed
+            gradually and because previously parsed elements and contents must be re-parsed,
+            which takes time.
+        </p>
+        <p>
+            keeps any DOM element's event handlers in tact: The new elements produced by
+            automatically setting innerHTML do not acquire event handlers. To do this, one must
+            manually attach the event handlers to new elements and maintain track of the event
+            handlers. On some browsers, this can result in a memory leak.
+        </p>
+        <p>
+            All content has been changed: When you use innerHTML to add, append, delete, or edit
+            material on a webpage, all of the content and any DOM nodes inside that element are
+            replaced and recreated.
+        </p>
+        <p>
+            InnerHTML appending is not supported: In JavaScript, adding is often done with the
+            += operator. However, when using innerHTML to append to an HTML tag, the entire
+            tag is re-parsed.
+        </p>
+        <p>
+            Problem: The old content gets overwritten even while the item is present.object
+            innerHTML is used.Instead of using object.innerHTML += 'html', use innerHTML +
+            'html'. Appending is impossible without repartitioning the entire innerHTML. As a
+            result, using innerHTML becomes extremely sluggish. When dynamic DOM elements
+            must be formed, string concatenation simply cannot scale since it becomes challenging
+            to keep track of the plus signs and quotation marks' openings and closings.
+        </p>
+        <p>
+            Can cause the document to be broken: Since innerHTML does not offer appropriate
+            validation, any legitimate HTML code can be used. The JavaScript document might be
+            broken as a result. Even flawed HTML can be utilized, which could result in unpleasant
+            surprises.
+        </p>
+        <p>
+            The ability of innerHTML to add text and components to the webpage makes it possible
+            for malevolent users to change and display unwanted or destructive content within
+            other HTML element tags. This is known as cross-site scripting (XSS). Additionally,
+            critical information may be lost, leaked, or changed as a result of cross-site scripting.
+        </p>
+    </details>
+    <!-- Question 18 -->
+    <details>
+        <summary>Create password field with show hide functionalities</summary>
+        <p>
+            This post will demonstrate how to use JavaScript to hide and reveal passwords. When
+filling out a form, there may be instances where we need to type a password and want to
+review our previous input. There is a checkbox that, when selected, makes the
+characters visible so that you can see that. In this lesson, we'll use JavaScript to
+implement the toggle password feature.
+        </p>
+        <br>
+        <h2>Approach</h2>
+        <br>
+        <ol style="padding-left: 2%;">
+            <li>Create an HTML form with a password-only input field. </li>
+            <li>Make a checkbox that will serve as the toggle. </li>
+            <li>Make a function that responds to the checkbox being clicked by the user.</li>
+        </ol>
+    </details>
+</body>
+
+</html>
