@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Slide Show</title>
+    <style>
+        *{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+.container {
+    position: relative;
+    background: #aad5f6;
+}
+.slide-1 {
+    background: url('https://img.freepik.com/free-photo/statue-liberty-new-york-city-skyline-usa_268835-777.jpg?w=996&t=st=1700409356~exp=1700409956~hmac=6804d478c7db6ab6efd4207c24bb525667f859fa50e9ac0d18c113f6cac8d67d');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.slide-2 {
+    background: url('https://img.freepik.com/free-photo/golden-gate-bridge-body-water-near-rock-formations-during-sunset-san-francisco-california_181624-3228.jpg?w=996&t=st=1700409528~exp=1700410128~hmac=041fe1e0e74d3793f010b90bbb4946d9cbd54a626913e498dd3be157e23371d5');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.slide-3 {
+    background: url('https://img.freepik.com/free-photo/sunny-tropical-landscape_23-2150466874.jpg?t=st=1700409608~exp=1700413208~hmac=d26ab0cacaf064576ae1e03bcb3d4023779c446b85fa0c933a0479ba9b2b82b7&w=1380');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.slide {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow-x: hidden;
+}
+.caption {
+    background: rgba(0, 0, 0, 0.03);
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 40px 0px;
+}
+.caption h3 {
+    color: #fff;
+    text-align: center;
+    font-size: 50px;
+    padding: 18px;
+}
+.caption p {
+    max-width: 600px;
+    width: 90%;
+    margin: 0px auto;
+    color: #ccc;
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.5em;
+}
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 100;
+    background: rgba(0, 0, 0, .1);
+    border-radius: 50%;
+    transform: background 500ms;
+}
+.arrow img {
+    width: 50px;
+}
+.arrow:hover {
+    background: rgba(0, 0, 0, .4);
+}
+.l {
+    left: 0;
+}
+.r {
+    right: 0;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="arrow l" onclick="prev()">
+            <img src="l.png" alt="l">
+        </div>
+        <div class="slide slide-1">
+             <div class="caption">
+                 <h3>New York</h3>
+                 <p>We love the Big Apple!</p>
+             </div>
+        </div>
+        <div class="slide slide-2">
+            <div class="caption">
+                <h3>Los Angeles</h3>
+                <p>LA is always so much fun!</p>
+            </div>
+       </div>
+       <div class="slide slide-3">
+            <div class="caption">
+                <h3>Bahar Dar</h3>
+                <p>Thank you, Bahar Dar!</p>
+            </div>
+       </div>
+       <div class="arrow r" onclick="next()">
+            <img src="r.png" alt="r">
+        </div>
+    </div>
+
+    <script>
+        let slide = document.querySelectorAll('.slide');
+        var current = 0;
+
+        function cls(){
+            for(let i = 0; i < slide.length; i++){
+                  slide[i].style.display = 'none';
+            }
+        }
+
+        function next(){
+            cls();
+            if(current === slide.length-1) current = -1;
+            current++;
+
+            slide[current].style.display = 'block';
+            slide[current].style.opacity = 0.4;
+
+            var x = 0.4;
+            var intX = setInterval(function(){
+                x+=0.1;
+                slide[current].style.opacity = x;
+                if(x >= 1) {
+                    clearInterval(intX);
+                    x = 0.4;
+                }
+            }, 100);
+
+        }
+
+        function prev(){
+            cls();
+            if(current === 0) current = slide.length;
+            current--;
+
+            slide[current].style.display = 'block';
+            slide[current].style.opacity = 0.4;
+
+            var x = 0.4;
+            var intX = setInterval(function(){
+                x+=0.1;
+                slide[current].style.opacity = x;
+                if(x >= 1) {
+                    clearInterval(intX);
+                    x = 0.4;
+                }
+            }, 100);
+
+        }
+
+        function start(){
+            cls();
+            slide[current].style.display = 'block';
+        }
+        start();
+    </script>
+</body>
+</html>
